@@ -70,25 +70,91 @@
 
 ### Prerequisites
 - Python 3.8+
-- pip
+- pip / pip3
+- Git
 
 ### Installation
 
+#### 1️⃣ Clone the Repository
+
 ```bash
-# Clone the repository
 git clone https://github.com/sciguy-code/reelsense.git
 cd reelsense
+```
 
-# Create virtual environment
+---
+
+#### 2️⃣ Create Virtual Environment
+
+<details>
+<summary>🍎 <b>macOS</b></summary>
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+</details>
+
+<details>
+<summary>🐧 <b>Linux (Ubuntu/Debian)</b></summary>
+
+```bash
+# Install venv if not available
+sudo apt install python3-venv
+
+# Create and activate
+python3 -m venv venv
+source venv/bin/activate
+```
+
+</details>
+
+<details>
+<summary>🪟 <b>Windows (PowerShell)</b></summary>
+
+```powershell
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
+```
 
-# Install dependencies
+> ⚠️ If you get an execution policy error, run:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+
+</details>
+
+<details>
+<summary>🪟 <b>Windows (Command Prompt)</b></summary>
+
+```cmd
+python -m venv venv
+venv\Scripts\activate.bat
+```
+
+</details>
+
+---
+
+#### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Launch Jupyter Notebook
+---
+
+#### 4️⃣ Launch Jupyter Notebook
+
+```bash
 jupyter notebook reel_sense.ipynb
 ```
+
+> 💡 **Tip**: If `jupyter` is not found, install it with:
+> ```bash
+> pip install jupyter
+> ```
 
 ---
 
