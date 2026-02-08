@@ -1,153 +1,262 @@
-Summary
-=======
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Made%20with-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Recommendation-green?style=for-the-badge" alt="ML">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License">
+</p>
 
-This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018.
+<h1 align="center">🎬 ReelSense</h1>
 
-Users were selected at random for inclusion. All selected users had rated at least 20 movies. No demographic information is included. Each user is represented by an id, and no other information is provided.
+<p align="center">
+  <strong>An Intelligent Hybrid Movie Recommendation System</strong>
+  <br>
+  <em>Combining Collaborative Filtering + Content-Based Features with Explainability</em>
+</p>
 
-The data are contained in the files `links.csv`, `movies.csv`, `ratings.csv` and `tags.csv`. More details about the contents and use of all these files follows.
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-how-it-works">How It Works</a> •
+  <a href="#-evaluation-metrics">Metrics</a> •
+  <a href="#-project-structure">Structure</a>
+</p>
 
-This is a *development* dataset. As such, it may change over time and is not an appropriate dataset for shared research results. See available *benchmark* datasets if that is your intent.
+---
 
-This and other GroupLens data sets are publicly available for download at <http://grouplens.org/datasets/>.
+## ✨ Features
 
+| Feature | Description |
+|---------|-------------|
+| 🔄 **Hybrid Recommendations** | Combines collaborative filtering with content-based methods for superior accuracy |
+| 🧠 **Smart Explainability** | Every recommendation comes with a human-readable explanation |
+| 📊 **Comprehensive Evaluation** | Includes Precision@K, Recall@K, diversity, and coverage metrics |
+| 🎯 **Popularity-Based Fallback** | Cold-start handling with weighted popularity scoring |
+| 📈 **Long-Tail Analysis** | Visualizes and addresses item popularity distribution |
+| 🔧 **Leave-Last-N Split** | Proper temporal train-test splitting for recommender systems |
 
-Usage License
-=============
+---
 
-Neither the University of Minnesota nor any of the researchers involved can guarantee the correctness of the data, its suitability for any particular purpose, or the validity of results based on the use of the data set. The data set may be used for any research purposes under the following conditions:
+## 🛠️ Tech Stack
 
-* The user may not state or imply any endorsement from the University of Minnesota or the GroupLens Research Group.
-* The user must acknowledge the use of the data set in publications resulting from the use of the data set (see below for citation information).
-* The user may redistribute the data set, including transformations, so long as it is distributed under these same license conditions.
-* The user may not use this information for any commercial or revenue-bearing purposes without first obtaining permission from a faculty member of the GroupLens Research Project at the University of Minnesota.
-* The executable software scripts are provided "as is" without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of them is with you. Should the program prove defective, you assume the cost of all necessary servicing, repair or correction.
+<table>
+<tr>
+<td align="center" width="96">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48" height="48" alt="Python" />
+<br>Python
+</td>
+<td align="center" width="96">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="48" height="48" alt="Pandas" />
+<br>Pandas
+</td>
+<td align="center" width="96">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="48" height="48" alt="NumPy" />
+<br>NumPy
+</td>
+<td align="center" width="96">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="48" height="48" alt="Scikit-learn" />
+<br>Scikit-learn
+</td>
+<td align="center" width="96">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" width="48" height="48" alt="Jupyter" />
+<br>Jupyter
+</td>
+</tr>
+</table>
 
-In no event shall the University of Minnesota, its affiliates or employees be liable to you for any damages arising out of the use or inability to use these programs (including but not limited to loss of data or data being rendered inaccurate).
+---
 
-If you have any further questions or comments, please email <grouplens-info@umn.edu>
+## 🚀 Quick Start
 
+### Prerequisites
+- Python 3.8+
+- pip
 
-Citation
-========
+### Installation
 
-To acknowledge use of the dataset in publications, please cite the following paper:
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/reelsense.git
+cd reelsense
 
-> F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. <https://doi.org/10.1145/2827872>
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+# Install dependencies
+pip install -r requirements.txt
 
-Further Information About GroupLens
-===================================
+# Launch Jupyter Notebook
+jupyter notebook reel_sense.ipynb
+```
 
-GroupLens is a research group in the Department of Computer Science and Engineering at the University of Minnesota. Since its inception in 1992, GroupLens's research projects have explored a variety of fields including:
+---
 
-* recommender systems
-* online communities
-* mobile and ubiquitious technologies
-* digital libraries
-* local geographic information systems
+## 🧠 How It Works
 
-GroupLens Research operates a movie recommender based on collaborative filtering, MovieLens, which is the source of these data. We encourage you to visit <http://movielens.org> to try it out! If you have exciting ideas for experimental work to conduct on MovieLens, send us an email at <grouplens-info@cs.umn.edu> - we are always interested in working with external collaborators.
+### Architecture Overview
 
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        ReelSense Pipeline                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│   ┌──────────────┐    ┌──────────────┐    ┌──────────────┐     │
+│   │ Data Loading │ -> │ Data Cleaning│ -> │ Train/Test   │     │
+│   │   (CSV)      │    │ & Processing │    │   Split      │     │
+│   └──────────────┘    └──────────────┘    └──────────────┘     │
+│                                                   │              │
+│                                                   ▼              │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │                 Hybrid Recommender Engine                │   │
+│   │  ┌─────────────────┐      ┌─────────────────────────┐   │   │
+│   │  │  Collaborative  │      │    Content-Based        │   │   │
+│   │  │   Filtering     │  +   │  (TF-IDF on Genres)    │   │   │
+│   │  │ (Cosine Sim)    │  α   │                        │   │   │
+│   │  └─────────────────┘      └─────────────────────────┘   │   │
+│   └─────────────────────────────────────────────────────────┘   │
+│                            │                                     │
+│                            ▼                                     │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │            Explainability Layer                          │   │
+│   │   "Recommended because you liked 'X', sharing genres"   │   │
+│   └─────────────────────────────────────────────────────────┘   │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-Content and Use of Files
-========================
+### Algorithm Details
 
-Formatting and Encoding
------------------------
+#### 1️⃣ Data Preprocessing
+- **Timestamp Conversion**: Unix timestamps → datetime objects
+- **Year Extraction**: Regex-based extraction from movie titles
+- **Genre Parsing**: Pipe-separated genres → lists
+- **Noise Filtering**: 
+  - Movies with < 5 ratings removed
+  - Users with < 20 ratings removed
 
-The dataset files are written as [comma-separated values](http://en.wikipedia.org/wiki/Comma-separated_values) files with a single header row. Columns that contain commas (`,`) are escaped using double-quotes (`"`). These files are encoded as UTF-8. If accented characters in movie titles or tag values (e.g. Misérables, Les (1995)) display incorrectly, make sure that any program reading the data, such as a text editor, terminal, or script, is configured for UTF-8.
+#### 2️⃣ Collaborative Filtering
+Uses **Item-Item Similarity** computed via cosine similarity:
 
+```python
+similarity = item_vectors @ item_vectors.T
+cf_scores = user_ratings @ similarity
+```
 
-User Ids
---------
+#### 3️⃣ Content-Based Filtering
+Leverages **TF-IDF Vectorization** on genre metadata:
 
-MovieLens users were selected at random for inclusion. Their ids have been anonymized. User ids are consistent between `ratings.csv` and `tags.csv` (i.e., the same id refers to the same user across the two files).
+```python
+tfidf_matrix = TfidfVectorizer().fit_transform(genres)
+genre_sim = cosine_similarity(tfidf_matrix)
+```
 
+#### 4️⃣ Hybrid Score Blending
+```python
+final_score = α × CF_score + (1 - α) × Content_score
+```
+Where `α = 0.7` (adjustable weight parameter)
 
-Movie Ids
----------
+---
 
-Only movies with at least one rating or tag are included in the dataset. These movie ids are consistent with those used on the MovieLens web site (e.g., id `1` corresponds to the URL <https://movielens.org/movies/1>). Movie ids are consistent between `ratings.csv`, `tags.csv`, `movies.csv`, and `links.csv` (i.e., the same id refers to the same movie across these four data files).
+## 📊 Evaluation Metrics
 
+### Model Performance
 
-Ratings Data File Structure (ratings.csv)
------------------------------------------
+| K Value | Precision@K | Recall@K |
+|---------|-------------|----------|
+| K=5     | 0.63%       | 3.16%    |
+| K=10    | 0.50%       | 4.98%    |
+| K=20    | 0.47%       | 9.30%    |
 
-All ratings are contained in the file `ratings.csv`. Each line of this file after the header row represents one rating of one movie by one user, and has the following format:
+### Diversity & Coverage
 
-    userId,movieId,rating,timestamp
+| Metric | Value |
+|--------|-------|
+| **Catalog Coverage** | 6.20% |
+| **Unique Items Recommended** | 604 |
 
-The lines within this file are ordered first by userId, then, within user, by movieId.
+### Comparison: Hybrid vs Popularity-Based
 
-Ratings are made on a 5-star scale, with half-star increments (0.5 stars - 5.0 stars).
+```
+Hybrid Model (K=10):      Precision: 0.50%  |  Recall: 4.98%
+Popularity-Based (K=10):  Precision: 0.25%  |  Recall: 2.49%
 
-Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.
+📈 Hybrid Model Improvement: ~2× better performance
+```
 
+---
 
-Tags Data File Structure (tags.csv)
------------------------------------
+## 📁 Project Structure
 
-All tags are contained in the file `tags.csv`. Each line of this file after the header row represents one tag applied to one movie by one user, and has the following format:
+```
+reelsense/
+├── 📓 reel_sense.ipynb      # Main Jupyter notebook with full implementation
+├── 📋 requirements.txt      # Python dependencies
+├── 📖 README.md            # Project documentation
+├── 🗂️ ml-latest-small/     # MovieLens dataset
+│   ├── movies.csv          # Movie metadata (9,742 movies)
+│   ├── ratings.csv         # User ratings (100,836 ratings)
+│   ├── tags.csv            # User-generated tags
+│   └── links.csv           # External database links
+└── 🐍 venv/                # Virtual environment (not tracked)
+```
 
-    userId,movieId,tag,timestamp
+---
 
-The lines within this file are ordered first by userId, then, within user, by movieId.
+## 📈 Dataset
 
-Tags are user-generated metadata about movies. Each tag is typically a single word or short phrase. The meaning, value, and purpose of a particular tag is determined by each user.
+This project uses the **MovieLens ml-latest-small** dataset:
 
-Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.
+| Statistic | Value |
+|-----------|-------|
+| **Total Ratings** | 100,836 |
+| **Total Movies** | 9,742 |
+| **Total Users** | 610 |
+| **Rating Scale** | 0.5 - 5.0 ⭐ |
+| **Time Range** | 1996 - 2018 |
 
+### Data Source
+> F. Maxwell Harper and Joseph A. Konstan. 2015. *The MovieLens Datasets: History and Context*. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19.
 
-Movies Data File Structure (movies.csv)
----------------------------------------
+---
 
-Movie information is contained in the file `movies.csv`. Each line of this file after the header row represents one movie, and has the following format:
+## 🎯 Sample Recommendations
 
-    movieId,title,genres
+### For User #1 (Action/Sci-Fi Enthusiast):
 
-Movie titles are entered manually or imported from <https://www.themoviedb.org/>, and include the year of release in parentheses. Errors and inconsistencies may exist in these titles.
+| Movie | Genres | Explanation |
+|-------|--------|-------------|
+| 🎬 Fifth Element, The | Action\|Adventure\|Comedy\|Sci-Fi | You liked 'Star Wars: Episode VI', sharing Action, Sci-Fi, Adventure |
+| 🎬 Austin Powers | Action\|Adventure\|Comedy | You liked 'Austin Powers: International Man of Mystery', sharing Action, Comedy, Adventure |
+| 🎬 Die Hard | Action\|Crime\|Thriller | You liked 'Shaft', sharing Action, Thriller, Crime |
+| 🎬 Aliens | Action\|Adventure\|Horror\|Sci-Fi | You liked 'Star Wars: Episode VI', sharing Action, Sci-Fi, Adventure |
+| 🎬 Hunt for Red October | Action\|Adventure\|Thriller | You liked 'Dr. No', sharing Action, Thriller, Adventure |
 
-Genres are a pipe-separated list, and are selected from the following:
+---
 
-* Action
-* Adventure
-* Animation
-* Children's
-* Comedy
-* Crime
-* Documentary
-* Drama
-* Fantasy
-* Film-Noir
-* Horror
-* Musical
-* Mystery
-* Romance
-* Sci-Fi
-* Thriller
-* War
-* Western
-* (no genres listed)
+## 🔮 Future Improvements
 
+- [ ] 🧪 Matrix Factorization (SVD/ALS)
+- [ ] 🤖 Deep Learning approaches (Neural Collaborative Filtering)
+- [ ] 🌐 Web interface with Flask/FastAPI
+- [ ] ⚡ Real-time recommendation updates
+- [ ] 📱 Mobile-responsive frontend
 
-Links Data File Structure (links.csv)
----------------------------------------
+---
 
-Identifiers that can be used to link to other sources of movie data are contained in the file `links.csv`. Each line of this file after the header row represents one movie, and has the following format:
+## 👨‍💻 Authors
 
-    movieId,imdbId,tmdbId
+Made with ❤️ for **BrainDead 2026 Hackathon**
 
-movieId is an identifier for movies used by <https://movielens.org>. E.g., the movie Toy Story has the link <https://movielens.org/movies/1>.
+---
 
-imdbId is an identifier for movies used by <http://www.imdb.com>. E.g., the movie Toy Story has the link <http://www.imdb.com/title/tt0114709/>.
+## 📄 License
 
-tmdbId is an identifier for movies used by <https://www.themoviedb.org>. E.g., the movie Toy Story has the link <https://www.themoviedb.org/movie/862>.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Use of the resources listed above is subject to the terms of each provider.
+---
 
-
-Cross-Validation
-----------------
-
-Prior versions of the MovieLens dataset included either pre-computed cross-folds or scripts to perform this computation. We no longer bundle either of these features with the dataset, since most modern toolkits provide this as a built-in feature. If you wish to learn about standard approaches to cross-fold computation in the context of recommender systems evaluation, see [LensKit](http://lenskit.org) for tools, documentation, and open-source code examples.
+<p align="center">
+  <strong>⭐ Star this repo if you found it helpful!</strong>
+</p>
