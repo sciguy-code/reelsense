@@ -316,7 +316,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  <strong>Made by team CrackHeads for BrainDead 2026 Hackathon
-
-Star this repo if you found it helpful!</strong>
+  <strong>Made by team CrackHeads for BrainDead 2026 Hackathon.Star this repo if you found it helpful!</strong>
 </p>
