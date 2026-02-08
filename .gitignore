@@ -32,6 +32,6 @@ build/
 
 # Logs
 *.log
-ml-latest-small/
-ml-latest-small.zip
+
+# Zip files
 *.zip
