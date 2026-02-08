@@ -196,6 +196,7 @@ flowchart TD
 Uses **Item-Item Similarity** computed via cosine similarity:
 
 ```python
+
 similarity = item_vectors @ item_vectors.T
 cf_scores = user_ratings @ similarity
 ```
